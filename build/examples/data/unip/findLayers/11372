@@ -1,0 +1,173 @@
+{
+   "status" : "ok",
+   "generated" : "2013-10-25 09:03:41",
+   "result" : [
+      {
+         "object_type_ids" : [
+            1
+         ],
+         "count" : 600,
+         "module_type" : null,
+         "name" : "Lampy",
+         "id" : 1,
+         "type" : "base",
+         "button" : null
+      },
+      {
+         "object_type_ids" : [
+            20
+         ],
+         "count" : 199,
+         "module_type" : null,
+         "name" : "Dopravní značení",
+         "id" : 1087,
+         "type" : "base",
+         "button" : null
+      },
+      {
+         "object_type_ids" : [
+            2
+         ],
+         "count" : 769,
+         "module_type" : null,
+         "name" : "Hřbitov",
+         "id" : 26,
+         "type" : "base",
+         "button" : null
+      },
+      {
+         "object_type_ids" : [
+            3,
+            4,
+            5
+         ],
+         "count" : 355,
+         "module_type" : null,
+         "name" : "Pasport komunikací",
+         "id" : 45,
+         "type" : "base",
+         "button" : null
+      },
+      {
+         "object_type_ids" : [
+            19,
+            17,
+            18,
+            16
+         ],
+         "count" : 3915,
+         "module_type" : null,
+         "name" : "Zeleň",
+         "id" : 1086,
+         "type" : "base",
+         "button" : null
+      },
+      {
+         "object_type_ids" : [
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            13,
+            7
+         ],
+         "count" : 200,
+         "module_type" : null,
+         "name" : "Městský mobiliář",
+         "id" : 82,
+         "type" : "base",
+         "button" : null
+      },
+      {
+         "object_type_ids" : [
+            15
+         ],
+         "count" : 26,
+         "module_type" : null,
+         "name" : "Naučná stezka",
+         "id" : 106,
+         "type" : "base",
+         "button" : null
+      },
+      {
+         "object_type_ids" : [
+            1
+         ],
+         "count" : 275,
+         "module_type" : null,
+         "name" : "Lampy - parkove paticove",
+         "id" : 155,
+         "type" : "select",
+         "button" : null
+      },
+      {
+         "object_type_ids" : [
+            1
+         ],
+         "count" : 379,
+         "module_type" : null,
+         "name" : "Sodíkové lampy",
+         "id" : 961,
+         "type" : "select",
+         "button" : null
+      },
+      {
+         "object_type_ids" : [
+            1
+         ],
+         "count" : 265,
+         "module_type" : null,
+         "name" : "Lampy s příkonem 100-300W",
+         "id" : 1124,
+         "type" : "select",
+         "button" : null
+      },
+      {
+         "object_type_ids" : [
+            22
+         ],
+         "count" : 0,
+         "module_type" : "wsdp",
+         "name" : "WSDP info o parcele",
+         "id" : 1597,
+         "type" : "module",
+         "button" : "generujInfoOParcelach"
+      },
+      {
+         "object_type_ids" : [
+            21
+         ],
+         "count" : 1,
+         "module_type" : "wsdp",
+         "name" : "WSDP LV",
+         "id" : 1596,
+         "type" : "module",
+         "button" : "generujLVZjednodusene"
+      },
+      {
+         "object_type_ids" : [
+            1
+         ],
+         "count" : 17,
+         "module_type" : null,
+         "name" : "Lampy oblast",
+         "id" : 1155,
+         "type" : "select",
+         "button" : null
+      },
+      {
+         "layer_type_id" : 3,
+         "object_type_ids" : [],
+         "count" : 0,
+         "name" : "Výsledek hledání",
+         "module_method" : null,
+         "module_type" : null,
+         "id" : 1767,
+         "type" : "temp"
+      }
+   ]
+}

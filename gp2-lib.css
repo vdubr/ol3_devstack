@@ -1,0 +1,783 @@
+
+/* Generic pane rules */
+body { margin: 0; -webkit-text-size-adjust: 100%; font-family: 'Roboto Condensed', sans-serif;}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Roboto Condensed', sans-serif; 
+}
+
+h1 {
+  font-size:28px; 
+  line-height:28px;
+  margin: 10px 0;
+}
+
+button.unstyled {
+  border:none;
+  background: transparent;
+}
+
+.page { left: 0; right: 0; top: 0; bottom: 0; }
+.scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.scroll-y { overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.fill, .pane { position: absolute; left: 0; top: 0; right: 0; bottom: 0; width: 100%; height: 100% }
+.pane { display: none !important; }
+
+/* Workaround: in landscape mode, IEMobile makes bottom toolbar overlap the page, so shorten the page by 75px to compensate */
+.iemobile .page { bottom: -6px; }
+@media screen and (orientation:landscape) { .iemobile .page { bottom: 75px; } }
+
+.btn-default {
+  background: #ccc;
+  border:none;
+}
+
+/*my*/
+.bottomBar{
+    bottom: 0px;
+
+}
+
+.sideBar{
+    top: 0;
+    bottom: 0;    
+}
+
+.gs-app {
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+
+
+.app-map{
+    width:100%;
+    height: 100%;
+    position:relative;
+}
+
+.gs-app-center{
+    position:absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+
+}
+/**
+*Rules for layerswitcher (gs-ls)
+*/
+
+.gs-toolspanel {
+  background: url('../img/gs-layerList-bg.png');
+  height: 100%;
+}
+
+button:focus, .btn:focus {outline: none;}
+
+.gs-ls {
+  height: 60%;
+  overflow: hidden;
+}
+
+.gs-ls-base {
+  height:auto;
+}
+
+.gs-ls.left{
+    left:0px
+}
+
+.gs-ls.right{
+    right:0px
+}
+
+.gs-head {
+  height: 42px;
+  border-bottom: 1px solid #000000;
+  position: relative;
+}
+
+.gs-main-logo {
+  float:left;
+  width: 150px;
+  height: 41px;
+}
+
+.gs-menu-button {
+  float:right;
+  width: 90px;
+}
+
+.gs-menu-button button {
+  width: 100%;
+  height: 41px;
+  background: #fbb03b;
+  color:#000;
+  border:none;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.gs-menu-button button span {
+  margin-right: 5px;
+}
+
+.gs-mainmenu-container {
+  display: block;
+  /* display: none; */
+  position: absolute;
+  width:100%;
+  background: #fbb03b;
+  z-index: 3;
+  top:42px;
+}
+
+.gs-layerswitcher-list {
+  margin: 0;
+}
+
+.gs-layerswitcher-container h2, .gs-baseswitcher-container h2 {
+  height:34px;
+  font-size: 14px;
+  line-height: 34px;
+  background: url('../img/gs-layerList-bg.png');
+  margin: 0;
+  padding: 0 10px;
+  color: #fbb03b;
+  border-bottom: 1px solid #fbb03b;
+}
+
+.gs-hide-button {
+  background: url('../img/gs-layerList-bg.png');
+  height: 41px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.gs-hide-button button {
+  border: none;
+  color: #fff;
+  background:transparent;
+  font-size: 18px;
+  height: 41px;
+  line-height: 41px;
+  width: 100%;
+  text-align: left;
+}
+
+.gs-hide-button button span {
+  margin-right: 10px;
+  color: #fbb03b;
+}
+
+.gs-panel-minimized,
+.gs-panel-minimized  .gs-hide-button
+{
+  width: 35px;
+}
+
+.gs-hide-button button span.glyphicon-chevron-right,
+.gs-panel-minimized .gs-hide-button button span.glyphicon-chevron-left,
+.gs-panel-minimized .gs-layer-visibility-button span,
+.gs-panel-minimized .gs-layer-grid-button,
+.gs-panel-minimized .gs-main-logo,
+.gs-panel-minimized .gs-button-text,
+.gs-right.minimized .gs-button-text,
+.gs-panel-minimized .gs-layerswitcher-container h2 span
+{
+  display: none;
+}
+
+.gs-panel-minimized .gs-hide-button button span.glyphicon-chevron-right {
+  display: block;
+  top: -2px;
+}
+
+
+.gs-panel-minimized .gs-menu-button button {
+  width: 35px;
+  float:right;
+}
+
+.gs-panel-minimized .gs-menu-button button span {
+  margin: -3px 0 0 0;
+}
+
+h2.gs-baselayers-headding {
+  color: #99ccff;
+  border-color: #99ccff;
+}
+
+.btn.gs-ls-btn.gs-layer-visible{
+   color:#ffffff;
+}
+
+.btn.gs-ls-btn.gs-layer-invisible{
+    //background:red
+}
+
+.gs-appmenu ul {
+  margin-bottom: 0;
+}
+
+.gs-layerList, .gs-appmenu ul li {
+  border-bottom: 1px dotted #3f4141;
+}
+
+.gs-layer-visibility-button {
+
+}
+
+.gs-layerswitcher-list .dropdown-toggle{
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+
+.gs-layerswitcher-list .gs-ls-btn, .gs-appmenu ul li button {
+  background:none;
+  border:none;
+  color:#a1a4a6;
+  font-size:18px;
+  text-align:left;
+  width:200px;
+  -webkit-box-shadow:none;
+  box-shadow: none;
+  white-space: normal;
+  padding-left: 5px;
+  line-height: 22px;
+}
+
+.gs-appmenu ul li button {
+  color:#000;
+  padding: 5px;
+  width: 100%;
+}
+
+.gs-layerswitcher-list .gs-layer-grid-button {
+  background:none;
+  border:none;
+  color:#a1a4a6;
+  float:right;
+  line-height:22px;
+}
+
+.gs-clean-layers:hover,
+.gs-layerswitcher-list .gs-ls-btn:hover,
+.gs-layerswitcher-list .gs-layer-grid-button:hover {
+  color:#ffffff;
+}
+
+.gs-layerswitcher-list .gs-layer-button {
+  width:100%;
+}
+
+.gs-layerswitcher-list .gs-layer-button i, .gs-appmenu span.glyphicon {width:20px; text-align: center; margin-right: 5px; line-height: 24px;}
+
+.gs-layerswitcher-list .open .dropdown-toggle.btn-default {
+  background:none;
+  border:none;
+  color:#ffffff;
+}
+
+.gs-clean-maps {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.gs-clean-layers {
+  font-size: 14px; 
+  color:#a1a4a6;
+}
+
+.gs-clean-layers i {
+  margin-right: 5px;
+}
+
+.gs-ls-closeBtn{
+  position: absolute;
+  left: 400px;
+  width: 20px;
+  height: 40px;
+  bottom: 5px;
+  background: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 901;
+}
+/**
+*Datagrid
+*/
+
+.gs-grid-container {
+  height:100%;
+  overflow: hidden;
+}
+
+.gs-datagrid{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: url('../img/gs-datagrid-bg.png');
+}
+
+.gs-datagrid-wrapper, .gs-featuredetail-wrapper {
+  height: 100%;
+  padding: 17px;
+  background: url('../img/gs-datagrid-bg.png');
+}
+
+.gs-datagrid h2{
+  border-bottom: 1px dotted #7a7a79;
+  padding-bottom: 10px;
+}
+
+
+.gs-datagrid table tbody{
+  overflow:auto;
+}
+
+.gs-datagrid table.table tr th {
+  background: #cccccc;
+  border:none;
+}
+
+.gs-datagrid table.table tr td, 
+.gs-datagrid-little table.table tr td {
+  border-top:none;
+  border-bottom: 1px dotted #7a7a79;
+}
+
+.gs-searchdiv {
+  height:72px;
+  width:100%;
+  background: url('../img/gs-layerList-bg.png');
+  float:none;
+  padding-top:18px;
+  margin-top: -72px;
+}
+
+.gs-searchdiv .input-group {
+  width:350px;
+  height:35px;
+}
+
+.gs-searchdiv .input-group .form-control {
+  display: block;
+  width: 100%;
+  height: 35px;
+  padding: 6px 12px;
+  color: #000000;
+  background-color: #fff;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  border:none;
+  border-radius:0;
+}
+
+.gs-datagrid-detail-button {
+  background: #cccccc;
+  border:none;
+}
+
+.gs-datagrid-detail-button .gs-button-text {
+  font-size: 14px;
+}
+
+.gs-datagrid-detail-button .glyphicon{
+  margin-right: 5px;
+}
+
+.gs-searchdiv .input-group .btn {
+  border:none;
+  color:#fff;
+  height:35px;
+  background: #000;
+  border-radius:0;
+}
+
+.gs-searchdiv .input-group .btn .glyphicon {
+  margin-right: 5px;
+}
+
+.gs-datagrid-footer {
+  height: 41px;
+  line-height: 41px;
+  background: url('../img/gs-layerList-bg.png');
+  margin-bottom: -41px;
+  font-size: 18px;
+}
+
+.gs-datagrid-footer button, .gs-datagrid-close {
+  color: #fbb03b;
+}
+
+.gs-datagrid-footer button.gs-datagrid-maximize {
+  margin-left: 10px;
+}
+
+.gs-datagrid-footer button.gs-datagrid-minimize {
+  margin-right: 10px;
+  float:right;
+}
+
+.gs-datagrid-footer .glyphicon {
+  color: #fbb03b;
+}
+
+.gs-datagrid-footer button.gs-datagrid-maximize .glyphicon {
+  margin-right: 5px;
+}
+
+.gs-datagrid-footer button.gs-datagrid-minimize .glyphicon,
+.gs-datagrid-footer button.gs-datagrid-unmaximize .glyphicon{
+  margin-left: 5px;
+}
+
+.panel {
+  padding: 72px 0 41px 0;
+  background:none;
+  border: none;
+  border-radius: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 0;
+   -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.shadow, .gs-datagrid-little {
+   -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  margin-left: 5px;
+}
+
+.gs-app-featureinfo {
+  z-index: 1000;
+  width: 250px;
+  height: 50px;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  overflow: auto;
+}
+
+.gs-center {
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index: 1;
+}
+
+.gs-left {
+  width: 240px;
+  height: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index: 2;
+  padding:0;
+}
+
+.gs-right {
+  height: 100%;
+  position:absolute;
+  top:0;
+  right:0;
+  z-index: 3;
+  padding-right: 0;
+  overflow: hidden;
+  padding-left: 0;
+}
+
+.gs-w90px {width: 90px;}
+
+/* popup */
+.popup-content {
+  padding: 0;
+  border-radius: 0;
+  font-size: 14px;
+  border:none;
+}
+
+.popover-content {
+  padding:0;
+  width: 250px;
+}
+
+.arrow {
+  width: 100%;
+  height: 28px;
+  text-align: center;
+  background: transparent;
+  overflow: hidden;
+}
+
+.arrow .glyphicon {
+  color:#fff;
+  font-size: 40px;
+  top: -24px;
+  text-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+
+.gs-datagrid-little{
+  background: #fff;
+}
+
+.gs-datagrid-little .gs-title {
+  background: #000;
+  color:white;
+  line-height: 40px;
+  height: 40px;
+  padding: 0 7px 0 10px;
+} 
+
+.gs-datagrid-little p {
+  margin:0;
+}
+
+.gs-datagrid-little table.table {
+  margin-bottom: 10px;
+}
+
+.gs-datagrid-little .gs-title button,
+td.gs-detail button {
+  float: right; 
+  font-size: 20px; 
+  color:#fbb03b;
+  margin-top: 6px;
+}
+
+td.gs-detail button {
+  float:none;
+  color: #000;
+}
+
+td.gs-detail {
+  background: #e6e6e6;
+  text-align: center;
+  width: 50px;
+}
+
+.gs-datagrid-little .gs-title p {
+  float: left;
+}
+
+.gs-count {
+  text-align: right;
+  padding-bottom: 10px;
+  padding-right: 9px;
+  font-size: 13px;
+}
+
+.gs-datagrid-objtype-select {
+  float: left;
+  width: auto;
+  margin-right: 10px;
+}
+
+.panel-heading {
+  padding: 10px 0;
+  margin-bottom: 5px;
+}
+
+
+/* detail */
+
+.gs-featuredetail-detail, .gs-featuredetail-edit {
+  position: relative;
+  color:#333333;
+}
+
+.gs-featuredetail-detail h3, 
+.gs-featuredetail-edit h3{
+  margin:0;
+  background: #fff;
+  padding: 0;
+  margin-bottom: 1px;
+  height: 39px;
+  line-height: 39px;
+  font-size: 24px;
+  padding-left: 8px
+}
+
+.gs-featuredetail-detail h3 .glyphicon,  
+.gs-featuredetail-edit h3 .glyphicon{
+  margin: 3px 8px 0 0;
+}
+
+.gp-featuredetail-close, .gp-featuredetail-editopen, .gp-featuredetail-editclose {
+  position: absolute;
+  top:7px; 
+  right: 12px;
+  font-size: 16px;
+}
+
+.gs-featuredetail-detail button .glyphicon, 
+.gs-featuredetail-edit button .glyphicon {
+  color: #29abe2;
+  margin-left: 5px;
+}
+
+.gp-featuredetail-editopen {
+  right:90px;
+}
+
+.gs-featuredetail-wrapper {
+  padding:40px;
+}
+
+/* ol */
+
+.ol-zoom {
+  top:48%;
+  right:10px; 
+  left:auto;
+  background: none;
+
+}
+
+.ol-zoom a, .ol-zoom a:hover {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  background: url('../img/gs-map-button.png') no-repeat;
+  margin-bottom: 5px;
+}
+
+.ol-scale-line {
+  left:255px;
+  background: url('../img/gs-layerList-bg.png');
+  border-radius: 0;
+}
+
+/** Geolocation */
+.gs-button-geolocation button,
+.gs-button-home button,
+.gs-button-geolocation button:hover,
+.gs-button-home button:hover,
+.gs-button-home button:focus,
+.gs-button-geolocation button:focus,
+.gs-button-home button:active,
+.gs-button-geolocation button:active{
+  background: transparent url('../img/gs-map-button.png') no-repeat;
+  line-height: 36px;
+  border-radius: 0;
+  border:none;
+  text-align: center;
+  padding: 0;
+  color: white;
+  width: 36px;
+  height: 36px;
+}
+
+.gs-button-geolocation,
+.gs-button-home {
+  position: absolute;
+  top:10px;
+  right:13px;
+  width: 36px;
+  height: 36px;
+}
+
+.gs-button-geolocation button span,
+.gs-button-home button span {
+  margin-top: -2px;
+}
+
+/** Home */
+.gs-button-home{
+  top:53px;
+}
+
+.gs-geoloc-active .glyphicon {
+  color:#fbb03b;
+}
+
+.gs-geoloc-tracking .glyphicon {
+  color:#99ccff;
+}
+
+
+/** modal dialog */
+
+.modal-content {
+  border-radius: 0;
+}
+
+.modal-header {
+  background: #000;
+  height: 45px;
+}
+
+.modal-header button {
+  font-size: 18px;
+  float:right;
+  margin-top: -4px;
+  margin-right: -7px;
+}
+
+.modal-header button .glyphicon {
+  color: #fbb03b;
+/** datagrid minimalization */
+
+.gs-right.minimized {
+  width: 0;
+  overflow: visible;
+}
+
+.gs-datagrid-unmaximize {
+  float: right;
+}
+
+.gs-right.default .gs-datagrid-unmaximize,
+.gs-right.default .gs-datagrid-unminimize,
+.gs-right.minimized .gs-searchdiv,
+.gs-right.minimized .gs-datagrid,
+.gs-right.minimized .gs-datagrid-maximize,
+.gs-right.minimized .gs-datagrid-unmaximize, 
+.gs-right.minimized .gs-datagrid-minimize,
+.gs-right.maximized .gs-datagrid-minimize,
+.gs-right.maximized .gs-datagrid-maximize,
+.gs-right.maximized .gs-datagrid-unminimize
+{
+  display: none;
+}
+
+.gs-right.default .gs-datagrid-unminimize {
+  margin-left: 5px;
+}
+
+.gs-right.minimized .shadow {
+  margin:0;
+}
+
+.gs-right.minimized .gs-datagrid-footer{
+  position: absolute;
+  left:-43px;
+  bottom: 65px;
+  width: 43px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.gs-datagrid-close {
+  font-size: 18px;
+  float: right;
+  position: absolute;
+  top: 22px;
+  right: 12px;
+}
+
+.gs-datagrid-close .glyphicon {
+  margin-left: 5px;
+}

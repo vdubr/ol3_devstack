@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "required": ["id", "name"],
+    "title":"User",
+    "description":"User configuration object",
+    "type":"object",
+    "properties": {
+        "id": {
+            "title":"User ID",
+            "type":"string"
+        },
+        "name": {
+            "title":"User Name",
+            "type":"string"
+        },
+        "layers": {
+            "type":"array",
+            "minItems": 0,
+            "items": {
+                "$ref":"layer.json"
+            }
+        }
+    }
+}

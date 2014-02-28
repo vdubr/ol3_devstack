@@ -1,0 +1,12 @@
+{
+  "name": "closure-library",
+  "_release": "71326067e6",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "71326067e6b9477dda868622dfbc1428e2a4f0d3"
+  },
+  "_source": "https://code.google.com/p/closure-library",
+  "_target": "master",
+  "_originalSource": "closure-library"
+}

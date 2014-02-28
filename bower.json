@@ -1,0 +1,35 @@
+{
+  "name": "Geoportal-2",
+  "version": "rc",
+  "authors": [
+    "Jachym Cepicky <jachym.cepicky@geosense.cz>",
+    "Vojtech Dubrovsky <vojtech.dubrovsky@geosense.cz>",
+    "Jiri Matyas <jiri.matyas@geosense.cz>",
+    "Radovan Otruba <radovan.otruba@geosense.cz>",
+    "Pavel Simon <pavel@geomatik.cz>"
+  ],
+  "description": "Geoportal library version 2",
+  "main": "build/lib/gs.js",
+  "keywords": [
+    "map",
+    "OpenLayers",
+    "Closure"
+  ],
+  "license": "MIT",
+  "homepage": "http://geosense.cz",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "closure-library":"master",
+    "openlayers3":"https://github.com/openlayers/ol3.git#ee33cbc52500028ce36d92122cd529477b1cd9ce",
+    "proj4js":"https://github.com/geosense/proj4js.git#5bf65dc67a5d37c68eb37b71538dfe19042ef820",
+    "bootstrap":"v3.1.0"
+  },
+  "devDependencies": {
+  }
+}

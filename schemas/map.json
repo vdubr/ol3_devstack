@@ -1,0 +1,40 @@
+"map": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title":"Map",
+    "description":"Map configuration object",
+    "type":"object",
+    "required": ["target","maxExtent","proj","layers"],
+    "properties": {
+        "target": {
+            "title":"Target",
+            "description":"ID of <div /> element, where the map should be rendered into",
+            "type":"string"
+        },
+        "extent": {
+            "title":"Maximum Extent",
+            "description":"Maximal extent of the map",
+            "type":"array",
+            "minItems": 4,
+            "maxItems": 6,
+            "items": {
+                "type":"number"
+            }
+        },
+        "center": {
+            "title":"Center",
+            "description":"Center coordinates",
+            "type":"array",
+            "minItems": 2,
+            "maxItems": 3,
+            "items": {
+                "type":"number"
+            }
+        },
+        "zoom": {
+            "title":"Zoom level",
+            "description":"Zoom level",
+            "type":"number"
+        },
+        "proj": {"$ref": "app.json#/definitions/proj"}
+    }
+}

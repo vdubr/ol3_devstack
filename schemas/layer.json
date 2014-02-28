@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title":"Layer",
+    "description":"Layer object configuration",
+    "type":"object",
+    "required": ["type"],
+    "properties": {
+        "type": {
+            "enum": ["osm","vector"]
+        },
+        "title": {
+            "type":"string"
+        }
+    }
+}

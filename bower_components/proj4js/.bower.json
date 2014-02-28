@@ -1,0 +1,12 @@
+{
+  "name": "proj4js",
+  "homepage": "https://github.com/geosense/proj4js",
+  "_release": "5bf65dc67a",
+  "_resolution": {
+    "type": "commit",
+    "commit": "5bf65dc67a5d37c68eb37b71538dfe19042ef820"
+  },
+  "_source": "https://github.com/geosense/proj4js.git",
+  "_target": "5bf65dc67a5d37c68eb37b71538dfe19042ef820",
+  "_originalSource": "https://github.com/geosense/proj4js.git"
+}

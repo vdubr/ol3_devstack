@@ -1,0 +1,12 @@
+{
+  "name": "openlayers3",
+  "homepage": "https://github.com/openlayers/ol3",
+  "_release": "ee33cbc525",
+  "_resolution": {
+    "type": "commit",
+    "commit": "ee33cbc52500028ce36d92122cd529477b1cd9ce"
+  },
+  "_source": "https://github.com/openlayers/ol3.git",
+  "_target": "ee33cbc52500028ce36d92122cd529477b1cd9ce",
+  "_originalSource": "https://github.com/openlayers/ol3.git"
+}

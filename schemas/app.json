@@ -1,0 +1,28 @@
+{
+    "title":"Geoportal Configuration",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description":"Schema for Geoportal 2 configuration JSON",
+    "type":"object",
+    "required":["map"],
+    "properties": {
+        "user": {
+            "type": "object",
+            "oneOf": [{"$ref":"user.json"}]
+        },
+        "map": {
+            "type": "object",
+            "oneOf": [{"$ref":"#/definitions/map"}]
+        }
+    },
+    "definitions": {
+        "proj": {
+            "title":"Projection",
+            "description":"Projection definition using EPSG code",
+            "type":"string",
+            "pattern": "^epsg:[0-9]{4,6}$"
+        },
+        "metadata": {
+            "type":"object"
+        }
+    }
+}

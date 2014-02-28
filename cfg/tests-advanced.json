@@ -1,0 +1,26 @@
+{
+
+   // we need a unique ID
+  "id": "%(ID)s",
+
+  "inherits": "base.json",
+
+  "mode": "advanced",
+
+  "checks": {
+    "checkVars": "OFF"
+  },
+
+/**
+ * Files to compile.
+ * Path to app.js.
+ * Inputs must include path to .../ol3/.../types.js ??
+ */
+  "inputs": [
+    "../../bower_components/openlayers3/build/src/external/externs/types.js",
+    "../../src/gs/app.js",
+    "../../src/gs/ui/ui.js",
+    "../../test/specs/gs/%(file)s"
+  ]
+
+}
