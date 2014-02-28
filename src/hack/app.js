@@ -25,4 +25,6 @@ hack.App = function() {
 */
 hack.App.prototype.start = function() {
   window['console']['log']('jo');
+  window['console']['log']('joasdfjknasůdj');
+  
 };
