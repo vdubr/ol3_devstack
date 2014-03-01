@@ -62,7 +62,7 @@ EXPORTS = [path for path in ifind('src')
            if path.endswith('.exports')]
 
 
-COMPILED = 'build/lib/gs.js'
+COMPILED = 'build/lib/hack.js'
 COMPILED_ADVANCED = 'build/lib/gs-advanced.js'
 COMPILED_SIMPLE = 'build/lib/gs-simple.js'
 BUILDS = [COMPILED, COMPILED_SIMPLE, COMPILED_ADVANCED]
@@ -97,7 +97,7 @@ def test_lib(t):
     """ Running casperjs tests
     """
 
-    includes = "build/lib/gs.js,bower_components/closure-library/closure/goog/base.js,"
+    includes = "build/lib/hack.js,bower_components/closure-library/closure/goog/base.js,"
     includes += ",".join(WORKERS_BUILD)
 
     t.run('%(CASPERJS)s',
@@ -301,8 +301,7 @@ def make_workers_cfg(trgt):
 
     trgt.touch()
 
-@target('runExampleServer',PLOVR_JAR,'build/cfgworkers/time_stamp',
-        'build/cfgexamples/time_stamp')
+@target('runExampleServer',PLOVR_JAR,'build/cfgexamples/time_stamp')
 def run_plovr_example_server(t):
     EXAMPLES_CONFIG = [path for path in ifind('build/cfgexamples/') if path.endswith('.js')]
     WORKERS_CONFIG = [path for path in ifind('build/cfgworkers/') if path.endswith('.js')]
@@ -331,10 +330,6 @@ def compile_example_javascripts(t):
     t.rm_rf('build/examples')
     t.makedirs('build/examples')
     t.cp_r('examples/stable/css', 'build/examples/css')
-    t.cp_r('examples/stable/img', 'build/examples/img')
-    t.cp_r('examples/stable/data', 'build/examples/data')
-    t.cp_r('examples/stable/lang', 'build/examples/lang')
-    t.cp('examples/stable/loader-static.js', 'build/examples/loader.js')
     EXAMPLES_CONFIG = [path for path in ifind('build/cfgexamples/') if path.endswith('.js')]
     for f in EXAMPLES_CONFIG:
         (f_path, f_name) = os.path.split(f)
@@ -390,13 +385,12 @@ virtual('userdoc', DOC)
 virtual('lint', 'build/lint-stamp')
 virtual('fix', 'build/fix-stamp')
 virtual('workers', 'build/cfgworkers/time_stamp', 'build/workers/time_stamp')
-virtual('lib', 'fix', 'lint', COMPILED, COMPILED_ADVANCED, COMPILED_SIMPLE, 'workers')
+virtual('lib', 'fix', 'lint', COMPILED, COMPILED_ADVANCED, COMPILED_SIMPLE)
 virtual('librigid', 'lint', COMPILED, COMPILED_ADVANCED, COMPILED_SIMPLE, 'workers')
 virtual('build', 'ol3', 'lib', 'doc', 'buildexamples')
 virtual('ol3', 'updateBower')
 virtual('buildexamples', 'build/src/typedefs.js', 'build/cfg/exports.js',
-        'build/cfgworkers/time_stamp', 'build/cfgexamples/time_stamp',
-        'build/workers/time_stamp', 'build/examples/loader.js')
+         'build/cfgexamples/time_stamp', 'build/examples/loader.js')
 virtual('compileexamples', 'buildexamples', 'build/examples/loader.js')
 virtual('examples', 'buildexamples', 'runExampleServer')
 virtual('clean', 'cleanBuild', 'clean_bower')
